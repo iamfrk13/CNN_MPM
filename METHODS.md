@@ -30,8 +30,7 @@ It covers all steps from data acquisition to preprocessing, feature extraction, 
 # 3. Preprocessing Workflow
 
 ###  3.1 Atmospheric Correction
-- Conversion from Top-of-Atmosphere to Bottom-of-Atmosphere reflectance  
-- Scaling reflectance to 0–1
+- "Image is already atmospherically corrected (Level-2A). Additional reflectance scaling applied."
 
 ###  3.2 Spatial Resolution Standardization
 - Resampled 20 m bands to **10 m** using bilinear interpolation  
@@ -42,18 +41,38 @@ It covers all steps from data acquisition to preprocessing, feature extraction, 
 - Exported as analysis-ready georeferenced mosaic
 
 ###  3.4 Dataset Tiling (Patch Extraction)
-- Tile size: **64 × 64 pixels**
-- Non-overlapping windows
-- Each tile labeled using:
-  - Geological alteration zones  
-  - Known gossan signatures  
-  - Mineralization indicators
-  - Training tiles: 70 %
-  - Validation Tiles: 15 %
-  - Test Tiles: 15 %
+- The final labeled gossan raster and all feature stacks (MSI, band ratios, PCA, MNF) were tiled into fixed-size image patches for CNN training. The tiling process used the following workflow:
+
+- Tile size: 64 × 64 pixels
+- Overlap: 50% overlap in both x and y directions
+- Input stacks tiled:
+- MSI (core)
+- MSI + Band Ratios
+- MSI + PCA + MNF
+- Combined stacks (total 8 different inputs)
+
+#### Label raster: 3 classes
+- 0 = None (Background)
+- 1 = Weak gossan signal
+- 2 = Strong gossan signal
+
+#### Tile classification rules:
+- A tile is labeled “strong” if ≥ 12% of its pixels belong to class 2
+- A tile is labeled “weak” if ≥ 5% of its pixels belong to class 1
+- Otherwise, the tile is labeled “none”
+- All input rasters and the label raster were tiled in perfect alignment so each 64×64 tile had a matching label tile.
+
+#### Train/validation/test split:
+- 70% training
+- 15% validation
+- 15% testing
+
+- Performed separately for each label class to maintain balance.
+- Balanced dataset creation:
+- Each class (none, weak, strong) was shuffled and split independently, resulting in balanced subsets for training, validation, and testing.
 
 Complete preprocessing code:  
-**`Script/Preprocessing.py`**
+File: `Script/Preprocessing.py`
 
 ---
 
