@@ -29,10 +29,16 @@ Each plot shows validation accuracy for three datasets:
 ## 📁 Maps
 These maps are spatial outputs derived from the CNN models and preprocessing workflow.
 
-- **study area raster.jpg** — Sentinel-2 RGB composite representing the Reko Diq study area.
-- **band_ratios_composite_labeled.jpg** — Composite image showing band-ratio layers used as input for CNN (not a prospectivity map).
-- **pca_1.jpg** — PCA-transformed component visualization from Sentinel-2 data.
-- **pca_2.jpg** — Additional visualization of PCA components (or second PCA output).
-- **mnf_stack.jpg** — MNF-transformed imagery showing directional noise-filtered components.
+- **core_area_raster_aligned.tif** — Sentinel-2 RGB composite representing the Reko Diq study area.
+- **gossan_composite_raster_float.tif** — Composite image showing band-ratio layers used as input for CNN.
+- **ferric_B4_div_B3_norm.tif** — ferric iron map generation using B4/B3.
+- **ferricoxide_B11_div_B08_norm.tif** — ferric oxide map generation using B11/B8a.
+- **ferrous_combined_norm.tif** — ferrous iron map generation using (B12/B8a + B3/B4).
+- **hydroxyl_B11_div_B12_norm.tif** — ferric oxide map generation using B11/B12.
+- **stacked_ratios_aligned.tif** — All band ratio maps stacked.
+- **pca_1_2_stack_aligned.tif** — PCA-transformed component visualization from Sentinel-2 data.
+- **mnf_1_2_stack_aligned.tif** — MNF-transformed imagery showing directional noise-filtered components.
+- **core_area.shp** — Shape file of the Reko Diq study area.
+- 
 
 All visual products correspond to the Reko Diq Porphyry Cu–Au deposit and were derived from Sentinel-2 Level-2A imagery using the workflow described in the manuscript.
