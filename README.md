@@ -22,10 +22,14 @@ CNN_MPM/
 │   ├── cnn_core_ratios.py       (for band ratios + MSI i.e. 13 bands)
 │   ├── cnn_core_pca_mnf.py      (for PCA + MNF + MSI i.e. 13 bands)
 │
+├── data/
+│   └── README.md                (data not uploaded — too large)
+│
 └── results/
-    └── README.md
-  
-
+    ├── README.md
+    ├── Figures/
+    └── Maps/
+       
 ---
 
 ## ▶️ How to Run This Project (Anaconda Environment)
