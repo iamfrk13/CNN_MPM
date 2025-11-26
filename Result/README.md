@@ -31,7 +31,7 @@ These maps are spatial outputs derived from the CNN models and preprocessing wor
 
 - **core_area_raster_aligned.tif** — Sentinel-2 RGB composite representing the Reko Diq study area.
 - **gossan_composite_raster_float.tif** — Composite image showing band-ratio layers (float).
-- **gossan_composite_raster_float.tif** — Composite image showing band-ratio layers (binary).
+- **gossan_composite_raster_binary.tif** — Composite image showing band-ratio layers (binary) as sample, label to CNN.
 - **ferric_B4_div_B3_norm.tif** — ferric iron map generation using B4/B3.
 - **ferricoxide_B11_div_B08_norm.tif** — ferric oxide map generation using B11/B8a.
 - **ferrous_combined_norm.tif** — ferrous iron map generation using (B12/B8a + B3/B4).
