@@ -35,4 +35,4 @@ These maps are spatial outputs derived from the CNN models and preprocessing wor
 - **pca_2.jpg** — Additional visualization of PCA components (or second PCA output).
 - **mnf_stack.jpg** — MNF-transformed imagery showing directional noise-filtered components.
 
-All visual products correspond to the Reko Diq Porphyry Cu–Au deposit and were derived from Sentinel-2 Level-1C imagery using the workflow described in the manuscript.
+All visual products correspond to the Reko Diq Porphyry Cu–Au deposit and were derived from Sentinel-2 Level-2A imagery using the workflow described in the manuscript.
