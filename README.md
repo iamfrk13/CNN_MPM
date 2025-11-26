@@ -18,13 +18,12 @@ CNN_MPM/
 │
 ├── Script/
 │   ├── Preprocessing.py
-│   ├── cnn_core.py               (for 9 MSI bands) 
-│   ├── cnn_core_ratios.py        (for band ratios + MSI i.e. 13 bands)
-│   ├── cnn_core_pca_mnf.py       (for PCA + MNF + MSI i.e. 13 bands) 
+│   ├── cnn_core.py              (for 9 MSI bands)
+│   ├── cnn_core_ratios.py       (for band ratios + MSI i.e. 13 bands)
+│   ├── cnn_core_pca_mnf.py      (for PCA + MNF + MSI i.e. 13 bands)
 │
 └── results/
-    ├── figures/
-    └── maps/
+    └── README.md
   
 
 ---
