@@ -91,7 +91,7 @@ Three feature sets were prepared:
 
 ## 4.2 MSI + Band Ratios (13 Bands)
 Classical geological ratios for clay, iron, and alteration mapping:
-- Using QGIS 3.40.4 LTR
+- Prepared by Remote Sensing based analysis using QGIS 3.40.4 LTR
 
 Examples:
 - (B4/B2), (B11/B8A), (B12/B8), Clay–Iron indices
@@ -105,7 +105,7 @@ Final stack:
 
 ## 4.3 MSI + PCA + MNF (13 Components)
 Dimensionality reduction and noise filtering:
-- Using QGIS 3.40.4 LTR
+- Prepared by Remote Sensing based analysis using QGIS 3.40.4 LTR
 
 ### ✔ PCA
 - Computed on MSI stack  
